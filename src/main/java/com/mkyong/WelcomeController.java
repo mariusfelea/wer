@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WelcomeController {
 
 	// inject via application.properties
-	@Value("${welcome.message:test}")
-	private String message1 = "First page";
-	private String message2 = "Second page";
+	@Value("${welcome.message1:test}")
+	private String message1 = "";
+	
+	@Value("${welcome.message2:test}")
+	private String message2 = "";
 
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
@@ -23,6 +25,6 @@ public class WelcomeController {
 	@RequestMapping("/2")
 	public String welcome2(Map<String, Object> model) {
 		model.put("message", this.message2);
-		return "welcome";
+		return "welcome2";
 	}
 }
