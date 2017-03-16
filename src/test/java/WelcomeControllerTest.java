@@ -9,7 +9,7 @@ public class WelcomeControllerTest {
 		int first = 1;
 		int second = 2;
 		
-		int sum = 3;
+		int sum = 5;
 		
 		assertTrue("Error sum not equal with first + second", sum == first + second);
 	}
